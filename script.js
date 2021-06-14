@@ -47,16 +47,15 @@ function showSuccess(input){
 
 //email validation
 function emailValidator(input){
-    const regEx = /\S+@\S+\.\S+/
-    // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(regEx.test(input)){
+    const reg = /\S+@\S+\.\S+/
+    if(reg.test(input.value.trim())){
         showSuccess(input)
     }else{
         showError(input,`${getName(input)} is not valid`)
     }
 }
 
-//password match
+//check if password match
 function checkPasswordMatch(input1,input2){
     if(input1.value !== input2.value){
         showError(input2,`${getName(input2)} does not match`)
