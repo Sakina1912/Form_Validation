@@ -71,5 +71,3 @@ form.addEventListener('submit', function(e){
     emailValidator(email)
     checkPasswordMatch(password,password2)
 });
-
-console.log("hi")
